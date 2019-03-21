@@ -1,0 +1,147 @@
+.our-services {
+  background-color: #272727;
+  overflow: hidden;
+
+  .our-services-top-part {
+    display: block;
+    text-align: center;
+
+    h5 {
+      font-family: "Raleway";
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff;
+      padding-top: 100px;
+      margin-bottom: 49px;
+
+      span {
+        color: #ff0036;
+      }
+    }
+
+    p {
+      font-family: "Lato";
+      font-weight: 700;
+      color: $about-creativia-p-color;
+      font-size: 16px;
+      margin-bottom: 43px;
+
+      span {
+        color: $about-creativia-inside-color;
+      }
+    }
+  }
+
+  .our-services-middle-part {
+    margin-bottom: 100px;
+
+    .contents-block {
+      margin-top: 57px;
+      cursor: pointer;
+
+      &:hover {
+        .head {
+          #hex1 {
+            #color1 {
+              background-color: #ff0036;
+
+              i {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        .contents {
+          background-color: #ff0036;
+
+          p {
+            color: #fff;
+          }
+        }
+      }
+
+      .head {
+        p {
+          font-family: "Raleway";
+          font-size: 20px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #fff;
+          padding-top: 23px;
+          padding-left: 33px;
+        }
+        #hex1 {
+          width: 66px;
+          height: 66px;
+        }
+
+        #color1 {
+          background-color: #a4a4a4;
+
+          i {
+            font-size: 31px;
+            z-index: 15;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #262626;
+          }
+        }
+
+        .hexagon-wrapper {
+          text-align: center;
+          margin-left: 5px;
+          margin-bottom: 29px;
+          position: relative;
+          display: inline-block;
+        }
+
+        .hexagon {
+          height: 100%;
+          width: calc(100% * 0.57735);
+          display: inline-block;
+        }
+
+        .hexagon:before {
+          position: absolute;
+          top: 0;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          background-color: inherit;
+          height: inherit;
+          width: inherit;
+          content: "";
+          transform: rotateZ(60deg);
+        }
+
+        .hexagon:after {
+          position: absolute;
+          top: 0;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          background-color: inherit;
+          height: inherit;
+          width: inherit;
+          content: "";
+          transform: rotateZ(-60deg);
+        }
+      }
+      .contents {
+        width: 570px;
+        height: 121px;
+        background-color: #343434;
+        text-align: justify;
+
+        p {
+          font-family: "Lato";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          color: #a4a4a4;
+          padding: 35px;
+        }
+      }
+    }
+  }
+}

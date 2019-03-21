@@ -1,0 +1,194 @@
+header {
+  background: $nav-background-color;
+
+  @media (max-width: 991px) {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .logo-img-nav {
+    position: relative;
+    z-index: 5;
+
+    a.nav-link {
+      padding: 0;
+
+      img {
+        position: absolute;
+        top: -3px;
+        left: 0;
+
+        @media (max-width: 991px) {
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+    }
+  }
+
+  nav.navbar {
+    background: $nav-background-color !important;
+    padding-left: 280px;
+
+    @media (max-width: 991px) {
+      padding-left: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (max-width: 991px) {
+        padding-top: 60px;
+        margin-left: 15px;
+      }
+
+      li {
+        &.nav-item {
+          position: relative;
+          cursor: pointer;
+          padding: 10px 7px;
+          color: $nav-main-color;
+          font-family: "Raleway";
+          font-size: 18px;
+          text-transform: uppercase;
+
+          @media (min-width: 992px) and (max-width: 1199px) {
+            padding: 10px 0;
+            font-size: 16px;
+          }
+
+          @media (max-width: 991px) {
+            text-align: center;
+          }
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            &:before {
+              content: "";
+              border-top: 2px solid $nav-a-hover-lines-colors;
+              position: absolute;
+              top: 0px;
+              left: 40%;
+              width: 28px;
+
+              @media (max-width: 991px) {
+                left: 284px;
+                width: 121px;
+              }
+
+              @media (max-width: 767px) {
+                left: 194px;
+                width: 121px;
+              }
+
+              @media (max-width: 575px) {
+                left: 212px;
+                width: 121px;
+              }
+            }
+
+            &:after {
+              content: "";
+              border-top: 2px solid $nav-a-hover-lines-colors;
+              position: absolute;
+              bottom: 0px;
+              left: 40%;
+              width: 28px;
+
+              @media (max-width: 991px) {
+                left: 284px;
+                width: 121px;
+              }
+
+              @media (max-width: 767px) {
+                left: 194px;
+                width: 121px;
+              }
+
+              @media (max-width: 575px) {
+                left: 212px;
+                width: 121px;
+              }
+            }
+          }
+          .nav-link {
+            color: $nav-main-color;
+
+            &:focus {
+              color: inherit;
+              outline: none;
+
+              &:before {
+                content: "";
+                border-top: 2px solid $nav-a-hover-lines-colors;
+                position: absolute;
+                top: 0px;
+                left: 40%;
+                width: 28px;
+
+                @media (max-width: 991px) {
+                  left: 284px;
+                  width: 121px;
+                }
+
+                @media (max-width: 767px) {
+                  left: 194px;
+                  width: 121px;
+                }
+
+                @media (max-width: 575px) {
+                  left: 212px;
+                  width: 121px;
+                }
+              }
+
+              &:after {
+                content: "";
+                border-top: 2px solid $nav-a-hover-lines-colors;
+                position: absolute;
+                bottom: 0px;
+                left: 40%;
+                width: 28px;
+
+                @media (max-width: 991px) {
+                  left: 284px;
+                  width: 121px;
+                }
+
+                @media (max-width: 767px) {
+                  left: 194px;
+                  width: 121px;
+                }
+
+                @media (max-width: 575px) {
+                  left: 212px;
+                  width: 121px;
+                }
+              }
+            }
+
+            &:hover {
+              color: $nav-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  button.navbar-toggler {
+    background: $nav-main-color;
+  }
+}

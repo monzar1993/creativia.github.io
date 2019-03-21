@@ -1,0 +1,111 @@
+.our-skills {
+  position: relative;
+  text-align: center;
+
+  &:after {
+    content: "";
+    background-image: url("../image/about-us-after.png");
+    width: 21px;
+    height: 19px;
+    position: absolute;
+    left: 50%;
+    top: -9px;
+    transform: translate(-50%);
+  }
+
+  &:before {
+    content: "";
+    border-bottom: 1px solid #262626;
+    position: absolute;
+    top: 0;
+    width: 515px;
+    transform: translate(-50%);
+  }
+  .our-skills-top {
+    text-align: center;
+    display: block;
+    h5 {
+      font-family: "Raleway";
+      font-size: 30px;
+      font-weight: 700;
+      color: #262626;
+      padding-top: 100px;
+      margin-bottom: 49px;
+
+      span {
+        color: #ff0036;
+      }
+    }
+
+    p {
+      font-family: "Lato";
+      font-weight: 700;
+      color: $about-creativia-p-color;
+      font-size: 16px;
+      margin-bottom: 100px;
+
+      span {
+        color: $about-creativia-inside-color;
+      }
+    }
+  }
+
+  .our-skills-main {
+    margin-bottom: 100px;
+
+    .skill {
+      margin: 0 20px;
+      .circle-outside {
+        width: 146px;
+        height: 147px;
+        border-radius: 50%;
+        background: -webkit-linear-gradient(180deg, #e0e0e0 0%, #ff0036 100%);
+        position: relative;
+        margin: 0 auto 25px;
+
+        .circle-inside {
+          width: 140px;
+          height: 143px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-left: 13px;
+          margin: 0 auto;
+          color: #ff0036;
+          font-family: "Lato";
+          font-size: 40px;
+          font-weight: 300;
+          line-height: 94.88px;
+          background: #fff;
+          position: absolute;
+          top: 2px;
+          bottom: 0;
+          left: -1px;
+          right: -2px;
+
+          span {
+            color: #000000;
+          }
+        }
+      }
+
+      h6 {
+        color: #262626;
+        font-family: "Raleway";
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      p {
+        color: #505050;
+        font-family: "Lato";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+  }
+}

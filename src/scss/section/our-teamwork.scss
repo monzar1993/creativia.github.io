@@ -1,0 +1,194 @@
+.our-teamwork {
+  .container {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      background-image: url(../image/our-product-features-before.png);
+      width: 21px;
+      height: 19px;
+      position: absolute;
+      top: -9px;
+      left: 50%;
+    }
+
+    &:after {
+      content: "";
+      border-bottom: 1px solid $our-product-features-after-color;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 515px;
+      transform: translate(-50%);
+    }
+
+    .our-teamwork-top-part {
+      display: block;
+      text-align: center;
+      overflow: hidden;
+      outline: none;
+
+      h5 {
+        color: #262626;
+        font-family: "Raleway";
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 51px;
+        margin-top: 99px;
+
+        span {
+          color: #ff0036;
+        }
+      }
+
+      p {
+        color: #505050;
+        font-family: "Lato";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        margin-bottom: 97px;
+
+        span {
+          color: #ff0036;
+        }
+      }
+    }
+
+    .our-teammwork-middle-part {
+      justify-content: space-between;
+      margin-bottom: 110px;
+      position: relative;
+
+      .card {
+        border-radius: 0;
+        outline: none;
+        border: 1px solid #e7e7e7;
+        cursor: pointer;
+
+        .card-img-top-1,
+        .card-img-top-2,
+        .card-img-top-3,
+        .card-img-top-4 {
+          width: 270px;
+          height: 240px;
+          border-radius: 0;
+          background-color: #262626;
+          text-align: center;
+
+          &.card-img-top-1 {
+            background-image: url("../image/card-image-2.png");
+          }
+          &.card-img-top-2 {
+            background-image: url("../image/card-image-2.png");
+          }
+          &.card-img-top-3 {
+            background-image: url("../image/card-image-3.png");
+          }
+          &.card-img-top-4 {
+            background-image: url("../image/card-image-4.png");
+          }
+          #hex1 {
+            width: 41px;
+            height: 41px;
+            margin-top: 100px;
+            display: none;
+          }
+
+          #color1 {
+            background-color: #fff;
+
+            i {
+              font-size: 24px;
+              color: red;
+              z-index: 1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .hexagon-wrapper {
+            text-align: center;
+            margin: 0 10px;
+            position: relative;
+            display: inline-block;
+          }
+
+          .hexagon {
+            height: 100%;
+            width: calc(100% * 0.57735);
+            display: inline-block;
+          }
+
+          .hexagon:before {
+            position: absolute;
+            top: 0;
+            right: calc((100% / 2) - ((100% * 0.57735) / 2));
+            background-color: inherit;
+            height: inherit;
+            width: inherit;
+            content: "";
+            transform: rotateZ(60deg);
+          }
+
+          .hexagon:after {
+            position: absolute;
+            top: 0;
+            right: calc((100% / 2) - ((100% * 0.57735) / 2));
+            background-color: inherit;
+            height: inherit;
+            width: inherit;
+            content: "";
+            transform: rotateZ(-60deg);
+          }
+        }
+
+        &:hover {
+          border: 1px solid #262626;
+
+          .card-img-top-1,
+          .card-img-top-2,
+          .card-img-top-3,
+          .card-img-top-4 {
+            background-image: none;
+
+            #hex1 {
+              display: inline-block;
+            }
+          }
+
+          .card-body {
+            h5 {
+              color: #ff0036;
+            }
+          }
+        }
+
+        .card-body {
+          text-align: center;
+          padding: 34px;
+
+          h5 {
+            color: #262626;
+            font-family: "Raleway";
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+          }
+
+          p {
+            color: #505050;
+            font-family: "Lato";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

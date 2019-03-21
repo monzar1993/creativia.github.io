@@ -1,0 +1,202 @@
+.our-product-features {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    background-image: url(../image/our-product-features-before.png);
+    width: 21px;
+    height: 19px;
+    position: absolute;
+    top: -9px;
+    left: 50%;
+  }
+
+  &:after {
+    content: "";
+    border-bottom: 1px solid $our-product-features-after-color;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 515px;
+    transform: translate(-50%);
+  }
+  .our-product-features-top-part {
+    text-align: center;
+    display: block;
+
+    h5 {
+      color: #262626;
+      font-family: "Raleway";
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      padding-top: 100px;
+
+      span {
+        color: #ff0036;
+      }
+    }
+
+    p {
+      color: #505050;
+      font-family: "Lato";
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      margin-bottom: 100px;
+
+      span {
+        color: #ff0036;
+      }
+    }
+  }
+
+  .our-product-features-main-part {
+    margin-top: 178px;
+    margin-bottom: 410px;
+    li {
+      color: $our-product-features-li-color;
+      font-family: "Raleway";
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-bottom: 24px;
+      outline: none;
+
+      &:hover {
+        background: $our-product-features-li-hover-bg;
+        color: $our-product-features-li-hover-color;
+
+         #color1 {
+          background-color: #fff;
+
+          i {
+            color: #ff0036;
+          }
+        }
+      }
+
+      span {
+        display: block;
+        width: 37px;
+        height: 33px;
+        background-repeat: no-repeat;
+        position: relative;
+
+        #hex1 {
+          width: 32px;
+          height: 32px;
+          margin: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        #color1 {
+          background-color: #e7e7e7;
+
+          i {
+            font-size: 20px;
+            z-index: 15;
+            display: block;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            color: #262626;
+          }
+        }
+
+        .hexagon-wrapper {
+          text-align: center;
+          margin: 20px;
+          position: relative;
+          display: inline-block;
+        }
+
+        .hexagon {
+          height: 100%;
+          width: calc(100% * 0.57735);
+          display: inline-block;
+        }
+
+        .hexagon:before {
+          position: absolute;
+          top: 0;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          background-color: inherit;
+          height: inherit;
+          width: inherit;
+          content: "";
+          transform: rotateZ(60deg);
+        }
+
+        .hexagon:after {
+          position: absolute;
+          top: 0;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          background-color: inherit;
+          height: inherit;
+          width: inherit;
+          content: "";
+          transform: rotateZ(-60deg);
+        }
+      }
+
+      
+    }
+
+    .main-part-middle {
+      position: relative;
+
+      .middle-part-bg-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: 1;
+      }
+
+      .middle-part-front-bg-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 99%);
+        z-index: 3;
+      }
+
+      .middle-part-main-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -39%);
+        z-index: 2;
+      }
+
+      .middle-part-btn {
+        width: 170px;
+        height: 50px;
+        background-color: $our-product-features-btn-bg;
+        color: $our-product-features-btn-color;
+        font-family: "Raleway";
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: -100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+
+        &:hover {
+          background: $banner-button-bg-hover-color;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

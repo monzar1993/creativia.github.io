@@ -1,0 +1,264 @@
+.about-creativia {
+  text-align: center;
+  margin-bottom: 99px;
+
+  .top-part {
+    h5 {
+      font-family: "Raleway";
+      font-weight: 700;
+      color: $about-creativia-h5-color;
+      margin-top: 100px;
+      margin-bottom: 49px;
+      font-size: 30px;
+
+      span {
+        color: $about-creativia-inside-color;
+      }
+    }
+    p {
+      font-family: "Lato";
+      font-weight: 700;
+      color: $about-creativia-p-color;
+      font-size: 16px;
+
+      span {
+        color: $about-creativia-inside-color;
+      }
+    }
+  }
+  .middle-part {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      background-image: url("../image/about-us-after.png");
+      width: 21px;
+      height: 19px;
+      margin: 100px auto 0;
+    }
+
+    &:before {
+      content: "";
+      border-bottom: 1px solid #262626;
+      position: absolute;
+      bottom: 9px;
+      width: 515px;
+      transform: translate(-50%);
+    }
+
+    p {
+      font-family: "Lato";
+      font-weight: 500;
+      color: $about-creativia-p-color;
+      font-size: 16px;
+      text-align: justify;
+      margin-bottom: 44px;
+    }
+    .card {
+      margin: 20px 0;
+      border-radius: 0;
+      border-bottom: 1px solid #e7e7e7 !important;
+
+      .card-header {
+        padding: 0;
+
+        &:focus {
+          outline: none;
+        }
+
+        
+        h5 {
+
+          &:focus {
+            outline: none;
+          }
+          .btn-link {
+          font-family: "Raleway";
+          font-weight: 500;
+          font-size: 20px;
+          color: $about-creativia-active-name-color;
+          text-decoration: none;
+
+          &.collapsed {
+            color: $about-creativia-collapsed-name-color;
+          }
+        }
+        } 
+        
+
+        .card-body {
+          font-family: "Lato";
+          font-weight: 500;
+          font-size: 14px;
+          text-align: justify;
+          color: $about-creativia-card-body-color;
+        }
+      }
+    }
+
+    .middle-right {
+      height: 363px;
+
+      .hex-image {
+        width: 346px;
+        height: 299px;
+
+        position: relative;
+        margin: 50px auto;
+        transform: rotate(0deg);
+
+        &.front-img {
+          background: transparent url("../image/img-first-about-us.png") no-repeat;
+          background-size: cover;
+          background-position: center center;
+          z-index: 1;
+        }
+
+        &.left-back-img {
+          background: transparent url("../image/img-third-about-us.png") no-repeat;
+          background-size: 69%;
+          background-position: left center;
+          position: absolute;
+          top: 0;
+          left: 7%;
+        }
+
+        &.right-back-img {
+          background: transparent url("../image/img-second-about-us.png") no-repeat;
+          background-size: 88%;
+          background-position: center center;
+          position: absolute;
+          top: 1px;
+          right: 6%;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          width: 0;
+          height: 3px;
+          border-right: 85px solid transparent;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: -1px;
+          right: -1px;
+          width: 0;
+          height: 3px;
+          border-left: 85px solid transparent;
+        }
+      }
+    }
+  }
+  .bottom-part {
+    .hexagon {
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover .box-left {
+        border-right: 28px solid red;
+        .box-left-inside {
+          border-right: 26px solid red;
+        }
+      }
+
+      &:hover .box-middle {
+        background: red;
+        .box-middle-inside {
+          background: red;
+
+          i {
+            color: #fff;
+          }
+        }
+      }
+
+      &:hover .box-right {
+        border-left: 28px solid red;
+
+        .box-right-inside {
+          border-left: 26px solid red;
+        }
+      }
+
+      .box-left {
+        float: left;
+        border-right: 28px solid #000;
+        border-top: 43px solid transparent;
+        border-bottom: 43px solid transparent;
+        position: relative;
+
+        .box-left-inside {
+          position: absolute;
+          top: -41px;
+          right: -28px;
+          border-right: 26px solid #fff;
+          border-top: 41px solid transparent;
+          border-bottom: 40px solid transparent;
+        }
+      }
+      .box-middle {
+        float: left;
+        width: 47px;
+        height: 86px;
+        background-color: #000;
+        position: relative;
+
+        .box-middle-inside {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 2px;
+          width: 47px;
+          height: 82px;
+          background-color: #fff;
+
+          i {
+            font-size: 40px;
+            color: #000;
+          }
+        }
+      }
+      .box-right {
+        float: left;
+        border-left: 28px solid #000;
+        border-top: 43px solid transparent;
+        border-bottom: 43px solid transparent;
+        position: relative;
+
+        .box-right-inside {
+          position: absolute;
+          top: -41px;
+          left: -28px;
+          border-left: 26px solid #fff;
+          border-top: 41px solid transparent;
+          border-bottom: 40px solid transparent;
+        }
+      }
+    }
+
+    h6 {
+      margin: 36px 0 27px;
+      color: $about-creativia-h5-color;
+      font-family: "Raleway";
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    p {
+      color: #505050;
+      font-family: "Lato";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}
