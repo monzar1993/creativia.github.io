@@ -124,6 +124,10 @@
           position: absolute;
           top: 0;
           left: 7%;
+
+          @media (max-width: 1199px) {
+            left: 0;
+          }
         }
 
         &.right-back-img {
@@ -133,6 +137,10 @@
           position: absolute;
           top: 1px;
           right: 6%;
+
+          @media (max-width: 1199px) {
+            right: 0;
+          }
         }
 
         &:before {
