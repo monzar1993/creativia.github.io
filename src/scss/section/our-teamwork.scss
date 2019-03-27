@@ -23,7 +23,7 @@
       width: 515px;
       transform: translate(-50%);
 
-      @media (max-width:515px) {
+      @media (max-width: 515px) {
         width: 100%;
       }
     }
@@ -55,6 +55,10 @@
         line-height: 22px;
         margin-bottom: 97px;
 
+        @media (max-width: 575px) {
+          margin-bottom: 50px;
+        }
+
         span {
           color: $our-teamwork-span;
         }
@@ -72,6 +76,10 @@
         cursor: pointer;
         margin-bottom: 110px;
 
+        @media (max-width: 575px) {
+          margin: 25px 5px;
+        }
+
         .card-img-top-1,
         .card-img-top-2,
         .card-img-top-3,
@@ -81,7 +89,7 @@
           border-radius: 0;
           background-color: $our-teamwork-h5;
           text-align: center;
-          
+
           #hex1 {
             width: 41px;
             height: 41px;

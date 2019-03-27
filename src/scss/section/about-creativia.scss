@@ -3,8 +3,8 @@
   margin-bottom: 99px;
 
   @media (max-width: 575px) {
-        margin-bottom: 40px;
-      }
+    margin-bottom: 40px;
+  }
 
   .top-part {
     h5 {
@@ -16,8 +16,8 @@
       font-size: 30px;
 
       @media (max-width: 424px) {
-      margin-top: 70px;
-    }
+        margin-top: 70px;
+      }
 
       span {
         color: $about-creativia-inside-color;
@@ -50,6 +50,11 @@
     .accordion {
       @media (max-width: 991px) {
         width: 80%;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
         margin: 0 auto;
       }
     }
@@ -178,6 +183,10 @@
         position: relative;
         margin: 50px auto;
         transform: rotate(0deg);
+
+        @media (max-width: 991px) {
+          margin: 0 auto;
+        }
 
         @media (max-width: 535px) {
           width: 250px;

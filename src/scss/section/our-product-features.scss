@@ -74,15 +74,16 @@
     }
 
     @media (max-width: 575px) {
-        margin-top: 40px;
-        margin-bottom: 40px;
-      }
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
 
     .main-part-sides {
       margin-top: 75px;
 
       @media (max-width: 460px) {
         margin-top: 0;
+        padding: 0;
       }
 
       @media (max-width: 767px) {
@@ -100,6 +101,14 @@
         cursor: pointer;
         margin-bottom: 24px;
         outline: none;
+
+        @media (max-width: 991px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 17px;
+        }
 
         &:hover {
           background: $our-product-features-li-hover-bg;
@@ -190,9 +199,9 @@
         order: -1;
       }
 
-      @media (max-width:370px) {
-          height: 500px;
-        }
+      @media (max-width: 370px) {
+        height: 440px;
+      }
 
       .middle-part-bg-img {
         position: absolute;
@@ -224,14 +233,9 @@
         border-radius: 0;
         box-shadow: none;
 
-        @media (min-width: 425px) and (max-width: 575px) {
+        @media (max-width: 575px) {
           bottom: 11%;
         }
-
-        @media (max-width:424px) {
-          bottom: 23%;
-        }
-
 
         &:hover {
           background: $banner-button-bg-hover-color;
