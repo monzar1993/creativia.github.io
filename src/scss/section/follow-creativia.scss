@@ -3,6 +3,7 @@
   text-align: center;
   height: 383px;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -21,7 +22,7 @@
   }
 
   h5 {
-    color: #fff;
+    color: $follow-creativia-h5;
     font-family: "Raleway";
     font-size: 30px;
     font-weight: 700;
@@ -31,7 +32,7 @@
     z-index: 10;
 
     span {
-      color: #ff0036;
+      color: $follow-creativia-span;
     }
   }
   .hexagon-social-media {
@@ -42,16 +43,24 @@
     background-size: contain;
     margin: 0 10px;
 
+    @media (max-width: 1199px) {
+      margin: 0 25px;
+    }
+
+    @media (max-width: 991px) {
+      margin: 0;
+    }
+
     &:hover {
       background-image: url("../image/follow-creativia-bg-hexagon-hover.png");
 
       i {
-        color: #fff;
+        color: $follow-creativia-h5;
       }
     }
 
     i {
-      color: #ff0036;
+      color: $follow-creativia-span;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -61,7 +70,7 @@
 
     p {
       margin-top: 106px;
-      color: #fff;
+      color: $follow-creativia-h5;
       font-family: "Lato";
       font-size: 16px;
       font-weight: 400;

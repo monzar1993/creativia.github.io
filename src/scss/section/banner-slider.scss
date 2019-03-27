@@ -13,7 +13,7 @@
       &:hover {
         &:before {
             content: '';
-            background-color: rgb(0, 0, 0);
+            background-color: $banner-carousel-hover-bg-color;
             opacity: 0.702;
             position: absolute;
             left: 0px;
@@ -32,7 +32,7 @@
         h5 {
           font-family: "Raleway";
           font-weight: 700;
-          color: #fff;
+          color: $banner-h5-color;
           font-size: 30px;
           margin-bottom: 55px;
 
@@ -43,7 +43,7 @@
         p {
           font-family: "Lato";
           font-weight: 400;
-          color: #fff;
+          color: $banner-p-color;
           font-size: 16px;
         }
 
@@ -55,10 +55,18 @@
             border: none;
             font-family: 'Raleway';
             font-weight: 500;
-            color: #fff;
+            color: $banner-button-color;
             font-size: 20px;
             text-transform: uppercase;
-            margin: 9vh 2vw ;
+            margin: 9vh 2vw;
+
+            @media (max-width: 555px) {
+              margin: 4vh 2vw;
+            }
+
+            @media (max-width: 424px) {
+              margin: 2vh 2vw;
+            }
             
             &:hover {
                 background: $banner-button-bg-hover-color;

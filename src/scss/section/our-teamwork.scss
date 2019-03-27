@@ -11,6 +11,7 @@
       position: absolute;
       top: -9px;
       left: 50%;
+      transform: translate(-50%);
     }
 
     &:after {
@@ -21,6 +22,10 @@
       left: 50%;
       width: 515px;
       transform: translate(-50%);
+
+      @media (max-width:515px) {
+        width: 100%;
+      }
     }
 
     .our-teamwork-top-part {
@@ -30,7 +35,7 @@
       outline: none;
 
       h5 {
-        color: #262626;
+        color: $our-teamwork-h5;
         font-family: "Raleway";
         font-size: 30px;
         font-weight: 700;
@@ -38,12 +43,12 @@
         margin-top: 99px;
 
         span {
-          color: #ff0036;
+          color: $our-teamwork-span;
         }
       }
 
       p {
-        color: #505050;
+        color: $our-teamwork-p;
         font-family: "Lato";
         font-size: 16px;
         font-weight: 700;
@@ -51,21 +56,21 @@
         margin-bottom: 97px;
 
         span {
-          color: #ff0036;
+          color: $our-teamwork-span;
         }
       }
     }
 
     .our-teammwork-middle-part {
       justify-content: space-between;
-      margin-bottom: 110px;
       position: relative;
 
       .card {
         border-radius: 0;
         outline: none;
-        border: 1px solid #e7e7e7;
+        border: 1px solid $our-teamwork-border;
         cursor: pointer;
+        margin-bottom: 110px;
 
         .card-img-top-1,
         .card-img-top-2,
@@ -74,21 +79,9 @@
           width: 270px;
           height: 240px;
           border-radius: 0;
-          background-color: #262626;
+          background-color: $our-teamwork-h5;
           text-align: center;
-
-          &.card-img-top-1 {
-            background-image: url("../image/card-image-2.png");
-          }
-          &.card-img-top-2 {
-            background-image: url("../image/card-image-2.png");
-          }
-          &.card-img-top-3 {
-            background-image: url("../image/card-image-3.png");
-          }
-          &.card-img-top-4 {
-            background-image: url("../image/card-image-4.png");
-          }
+          
           #hex1 {
             width: 41px;
             height: 41px;
@@ -97,11 +90,11 @@
           }
 
           #color1 {
-            background-color: #fff;
+            background-color: $our-teamwork-color1;
 
             i {
               font-size: 24px;
-              color: red;
+              color: $our-teamwork-span;
               z-index: 1;
               position: absolute;
               top: 50%;
@@ -147,13 +140,15 @@
         }
 
         &:hover {
-          border: 1px solid #262626;
+          border: 1px solid $our-teamwork-h5;
 
           .card-img-top-1,
           .card-img-top-2,
           .card-img-top-3,
           .card-img-top-4 {
-            background-image: none;
+            img {
+              display: none;
+            }
 
             #hex1 {
               display: inline-block;
@@ -162,7 +157,7 @@
 
           .card-body {
             h5 {
-              color: #ff0036;
+              color: $our-teamwork-span;
             }
           }
         }
@@ -172,7 +167,7 @@
           padding: 34px;
 
           h5 {
-            color: #262626;
+            color: $our-teamwork-h5;
             font-family: "Raleway";
             font-size: 20px;
             font-weight: 500;
@@ -181,7 +176,7 @@
           }
 
           p {
-            color: #505050;
+            color: $our-teamwork-p;
             font-family: "Lato";
             font-size: 16px;
             font-weight: 400;

@@ -11,11 +11,36 @@
       font-weight: 700;
       margin-top: 99px;
       margin-bottom: 27px;
+
+      @media (max-width: 575px) {
+        margin-top: 50px;
+      }
     }
 
     .tabs {
       justify-content: center;
       margin-bottom: 99px;
+
+      @media (max-width: 575px) {
+        margin-bottom: 50px;
+      }
+
+      #list-tab {
+        @media (max-width: 575px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .list-group-item {
+          @media (min-width: 576px) and (max-width: 767px) {
+            padding: 0;
+          }
+
+          @media (max-width: 424px) {
+            padding: 7px;
+          }
+        }
+      }
 
       a {
         background: $portfolio-a-bg-color;
@@ -28,11 +53,11 @@
         text-transform: uppercase;
 
         &:hover {
-          color: #ff0036;
+          color: $portfolio-a-hover;
         }
 
         &.active {
-          color: #ff0036;
+          color: $portfolio-a-hover;
         }
       }
     }
@@ -51,6 +76,16 @@
     .image-7,
     .image-8 {
       @include portfolio-img-bg-block;
+      padding: 0;
+
+      @media (max-width: 575px) {
+        height: 260px;
+      }
+
+      @media (max-width: 424px) {
+        height: 200px;
+      }
+
       img {
         display: none;
         margin-top: 157px;
@@ -60,12 +95,19 @@
 
       p {
         display: none;
-        color: #ffffff;
+        color: $portfolio-h4-color;
         font-family: "Lato";
         font-size: 16px;
         font-weight: 400;
         line-height: 22px;
         position: relative;
+      }
+
+      .main-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
       }
 
       &:hover {
@@ -77,6 +119,12 @@
           }
         }
 
+        .main-img {
+          position: absolute;
+          top: 0;
+          opacity: 0.7;
+        }
+
         p {
           display: inherit;
           z-index: 5;
@@ -86,7 +134,7 @@
           width: 100%;
           height: 351px;
           z-index: 1;
-          background-color: rgba(#000, 0.8);
+          background-color: rgba($portfolio-box-bg, 0.8);
           position: absolute;
           left: 0;
           right: 0;
@@ -94,31 +142,6 @@
           bottom: 0;
         }
       }
-    }
-
-    .image-1 {
-      background-image: url("../image/portfolio-image-1.png");
-    }
-    .image-2 {
-      background-image: url("../image/portfolio-image-2.png");
-    }
-    .image-3 {
-      background-image: url("../image/portfolio-image-3.png");
-    }
-    .image-4 {
-      background-image: url("../image/portfolio-image-4.png");
-    }
-    .image-5 {
-      background-image: url("../image/portfolio-image-5.png");
-    }
-    .image-6 {
-      background-image: url("../image/portfolio-image-6.png");
-    }
-    .image-7 {
-      background-image: url("../image/portfolio-image-7.png");
-    }
-    .image-8 {
-      background-image: url("../image/portfolio-image-8.png");
     }
   }
 }

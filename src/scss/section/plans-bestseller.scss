@@ -10,6 +10,7 @@
     position: absolute;
     top: -9px;
     left: 50%;
+    transform: translate(-50%);
   }
 
   &:after {
@@ -20,6 +21,10 @@
     left: 50%;
     width: 515px;
     transform: translate(-50%);
+
+    @media (max-width: 515px) {
+      width: 100%;
+    }
   }
   .plans-bestseller-top-part {
     display: block;
@@ -28,7 +33,7 @@
     outline: none;
 
     h5 {
-      color: #262626;
+      color: $our-plans-bestseller-h5;
       font-family: "Raleway";
       font-size: 30px;
       font-weight: 700;
@@ -36,12 +41,12 @@
       margin-top: 100px;
 
       span {
-        color: #ff0036;
+        color: $our-plans-bestseller-span;
       }
     }
 
     p {
-      color: #505050;
+      color: $our-plans-bestseller-p;
       font-family: "Lato";
       font-size: 16px;
       font-weight: 700;
@@ -49,7 +54,7 @@
       margin-bottom: 100px;
 
       span {
-        color: #ff0036;
+        color: $our-plans-bestseller-span;
       }
     }
   }
@@ -58,35 +63,53 @@
     margin-bottom: 100px;
 
     .price {
+      p {
+        margin: 0;
+      }
+      @media (max-width: 1199px) {
+        margin: 0 29px 45px;
+      }
+
+      @media (max-width: 991px) {
+        margin: 0 auto 45px;
+      }
+
       &:hover {
         .cost {
-          background-color: #ff0036;
+          background-color: $our-plans-bestseller-span;
 
           p {
-            color: #fff;
+            color: $our-plans-bestseller-color1;
           }
           sub {
-            color: #fff;
+            color: $our-plans-bestseller-color1;
           }
         }
         .price-button {
           button {
-            background-color: #ff0036;
+            background-color: $our-plans-bestseller-span;
             border: none;
           }
         }
       }
-
+      @media (max-width: 1199px) {
+        .name,
+        .cost,
+        .specifications,
+        .price-button {
+          margin: 0 auto;
+        }
+      }
       .name {
         width: 270px;
         height: 48px;
-        background-color: #262626;
+        background-color: $our-plans-bestseller-h5;
         display: flex;
         justify-content: center;
         align-items: center;
 
         p {
-          color: #ffffff;
+          color: $our-plans-bestseller-color1;
           font-family: "Raleway";
           font-size: 20px;
           font-weight: 500;
@@ -98,19 +121,19 @@
       .cost {
         width: 270px;
         height: 87px;
-        background-color: #f2f2f2;
+        background-color: $our-plans-bestseller-cost;
         display: flex;
         justify-content: center;
         align-items: center;
 
         p {
-          color: #262626;
+          color: $our-plans-bestseller-h5;
           font-family: "Lato";
           font-size: 50px;
           font-weight: 900;
 
           sub {
-            color: #262626;
+            color: $our-plans-bestseller-h5;
             font-family: "Lato";
             font-size: 16px;
             font-weight: 400;
@@ -124,12 +147,12 @@
         align-items: center;
         width: 270px;
         height: 51px;
-        background-color: #fff;
-        border: 1px solid #e7e7e7;
+        background-color: $our-plans-bestseller-color1;
+        border: 1px solid $our-plans-bestseller-specification-border;
         border-top: none;
 
         p {
-          color: #262626;
+          color: $our-plans-bestseller-h5;
           font-family: "Lato";
           font-size: 16px;
           font-weight: 400;
@@ -143,15 +166,15 @@
         align-items: center;
         width: 270px;
         height: 77px;
-        background-color: #fff;
-        border: 1px solid #e7e7e7;
+        background-color: $our-plans-bestseller-color1;
+        border: 1px solid $our-plans-bestseller-specification-border;
         border-top: none;
 
         button {
           width: 228px;
           height: 38px;
-          background-color: #262626;
-          color: #ffffff;
+          background-color: $our-plans-bestseller-h5;
+          color: $our-plans-bestseller-color1;
           font-family: "Raleway";
           font-size: 18px;
           font-weight: 400;

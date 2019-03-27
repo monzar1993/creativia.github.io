@@ -1,0 +1,213 @@
+.find-us-here {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    background-image: url(../image/our-product-features-before.png);
+    width: 21px;
+    height: 19px;
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &:after {
+    content: "";
+    border-bottom: 1px solid $our-product-features-after-color;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 515px;
+    transform: translate(-50%);
+
+    @media (max-width: 515px) {
+      width: 100%;
+    }
+  }
+
+  .find-us-here-top-part {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    outline: none;
+
+    h5 {
+      color: $find-us-here-h5;
+      font-family: "Raleway";
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      margin-top: 100px;
+
+      span {
+        color: $find-us-here-span;
+      }
+    }
+
+    p {
+      color: $find-us-here-p;
+      font-family: "Lato";
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      margin-bottom: 97px;
+
+      span {
+        color: $find-us-here-span;
+      }
+    }
+  }
+
+  .find-us-here-middle-part {
+    background-repeat: no-repeat;
+    height: 575px;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+
+    #googlemaps {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      .map-bg {
+        width: 100%;
+      }
+    }
+
+    .marker {
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 251px;
+      margin-left: 250px;
+      padding: 0;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      @media (max-width: 991px) {
+        margin-left: 50px;
+      }
+
+      ul {
+        background: $find-us-here-h5;
+        color: $find-us-here-ul;
+        font-family: "MyriadProRegular";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        margin: 0;
+        padding: 24px;
+        list-style: none;
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 0;
+          height: 0;
+          left: 79%;
+          top: 93%;
+          position: absolute;
+          border-top: 85px solid transparent;
+          border-right: 31px solid $find-us-here-h5;
+          border-bottom: 0px solid transparent;
+          transform: rotate(200deg);
+        }
+      }
+    }
+
+    .contact-form {
+      margin-top: 100px;
+      padding: 0;
+      margin-left: 25px;
+
+      @media (max-width: 767px) {
+        margin: 20px auto;
+      }
+
+      @media (min-width: 1200px) {
+        margin-left: 131px;
+      }
+
+      form {
+        background: $find-us-here-ul;
+        box-shadow: 0 0 9px rgba(5, 5, 6, 0.17);
+
+        @media (max-width: 991px) {
+          margin-top: 20px;
+        }
+
+        p {
+          color: $find-us-here-h5;
+          font-family: "Raleway";
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 53.67px;
+          text-transform: uppercase;
+          padding-top: 50px;
+          padding-left: 43px;
+
+          @media (max-width: 991px) {
+            padding-top: 20px;
+          }
+        }
+
+        .form-content {
+          margin: 0 auto;
+          width: 80%;
+          text-align: end;
+
+          input {
+            border-radius: 0;
+            height: 35px;
+            border: 1px solid $find-us-here-input;
+            background-color: $find-us-here-ul;
+            color: $find-us-here-p;
+            font-family: "Lato";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            margin-bottom: 17px;
+          }
+
+          textarea {
+            height: 88px;
+            border: 1px solid $find-us-here-input;
+            background-color: $find-us-here-ul;
+            resize: none;
+            margin-bottom: 10px;
+            color: $find-us-here-p;
+            font-family: "Lato";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            width: 100%;
+          }
+
+          .submit-button {
+            width: 120px;
+            height: 40px;
+            background-color: $find-us-here-h5;
+            color: $find-us-here-ul;
+            font-family: "Lato";
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 48px;
+            margin-top: 27px;
+            outline: none;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}

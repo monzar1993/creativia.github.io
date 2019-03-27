@@ -15,12 +15,17 @@
 
   &:before {
     content: "";
-    border-bottom: 1px solid #262626;
+    border-bottom: 1px solid $our-skills-h5;
     position: absolute;
     top: 0;
     width: 515px;
     transform: translate(-50%);
+    
+    @media (max-width:515px) {
+        width: 100%;
+      }
   }
+
   .our-skills-top {
     text-align: center;
     display: block;
@@ -28,12 +33,12 @@
       font-family: "Raleway";
       font-size: 30px;
       font-weight: 700;
-      color: #262626;
+      color: $our-skills-h5;
       padding-top: 100px;
       margin-bottom: 49px;
 
       span {
-        color: #ff0036;
+        color: $our-skills-span;
       }
     }
 
@@ -55,43 +60,82 @@
 
     .skill {
       margin: 0 20px;
-      .circle-outside {
-        width: 146px;
-        height: 147px;
-        border-radius: 50%;
-        background: -webkit-linear-gradient(180deg, #e0e0e0 0%, #ff0036 100%);
-        position: relative;
-        margin: 0 auto 25px;
 
-        .circle-inside {
-          width: 140px;
-          height: 143px;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding-left: 13px;
-          margin: 0 auto;
-          color: #ff0036;
+      @media (max-width: 991px) {
+        margin: 20px 0 0;
+      }
+
+      .arc,
+      .arc::before {
+        display: block;
+        box-sizing: border-box;
+        border-radius: 100%;
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+      }
+
+      .circle-1::before {
+        content: "";
+        border: solid $our-skills-span 2px;
+        top: -2px;
+        left: -2px;
+        clip: rect(0px, 140px, 126px, 0px);
+        transform: rotate(270deg);
+      }
+
+      .circle-2::before {
+        content: "";
+        border: solid $our-skills-span 2px;
+        top: -2px;
+        left: -2px;
+        clip: rect(0px, 140px, 112px, 0px);
+        transform: rotate(270deg);
+      }
+
+      .circle-3::before {
+        content: "";
+        border: solid $our-skills-span 2px;
+        top: -2px;
+        left: -2px;
+        clip: rect(0px, 140px, 98px, 0px);
+        transform: rotate(270deg);
+      }
+
+      .circle-4::before {
+        content: "";
+        border: solid $our-skills-span 2px;
+        top: -2px;
+        left: -2px;
+        clip: rect(0px, 140px, 126px, 0px);
+        transform: rotate(270deg);
+      }
+
+      .arc {
+        border: solid $our-skills-arc 2px;
+        clip: rect(0px, 140px, 140px, 0px);
+        margin: 0 auto 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        h3 {
+          color: $our-skills-span;
           font-family: "Lato";
           font-size: 40px;
           font-weight: 300;
-          line-height: 94.88px;
-          background: #fff;
-          position: absolute;
-          top: 2px;
-          bottom: 0;
-          left: -1px;
-          right: -2px;
-
           span {
-            color: #000000;
+            color: $our-skills-span2;
           }
         }
       }
 
       h6 {
-        color: #262626;
+        color: $our-skills-h5;
         font-family: "Raleway";
         font-size: 20px;
         font-weight: 500;
@@ -100,7 +144,7 @@
       }
 
       p {
-        color: #505050;
+        color: $our-skills-p;
         font-family: "Lato";
         font-size: 16px;
         font-weight: 400;

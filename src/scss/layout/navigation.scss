@@ -28,13 +28,38 @@ header {
           left: 50%;
           transform: translate(-50%);
         }
+
+        @media (max-width: 424px) {
+          width: 200px;
+        }
       }
     }
   }
 
-  nav.navbar {
-    background: $nav-background-color !important;
+  .navbar {
+    background: $nav-background-color;
     padding-left: 280px;
+
+    @media (max-width: 424px) {
+        padding-right: 0;
+      }
+
+    .navbar-toggler {
+      @media (max-width: 575px) {
+        margin-left: 10px;
+      }
+
+      @media (max-width: 424px) {
+        width: 40px;
+        height: 30px;
+        padding: 0 0 3px 0px;
+      }
+
+      .navbar-toggler-icon {
+        width: 1em;
+        height: 1em;
+      }
+    }
 
     @media (max-width: 991px) {
       padding-left: 0;
@@ -49,6 +74,10 @@ header {
       @media (max-width: 991px) {
         padding-top: 60px;
         margin-left: 15px;
+      }
+
+      @media (max-width: 424px) {
+        margin-left: 0;
       }
 
       li {
@@ -69,6 +98,11 @@ header {
           @media (max-width: 991px) {
             text-align: center;
           }
+
+          @media (max-width: 575px) {
+            padding: 3px 0;
+          }
+
           &:focus {
             outline: none;
           }
@@ -82,18 +116,21 @@ header {
               width: 28px;
 
               @media (max-width: 991px) {
-                left: 284px;
+                left: 50%;
                 width: 121px;
-              }
-
-              @media (max-width: 767px) {
-                left: 194px;
-                width: 121px;
+                transform: translate(-50%);
               }
 
               @media (max-width: 575px) {
-                left: 212px;
-                width: 121px;
+                left: 50%;
+                width: 70%;
+                transform: translate(-50%);
+              }
+
+              @media (max-width: 419px) {
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%);
               }
             }
 
@@ -106,18 +143,21 @@ header {
               width: 28px;
 
               @media (max-width: 991px) {
-                left: 284px;
+                left: 50%;
                 width: 121px;
-              }
-
-              @media (max-width: 767px) {
-                left: 194px;
-                width: 121px;
+                transform: translate(-50%);
               }
 
               @media (max-width: 575px) {
-                left: 212px;
-                width: 121px;
+                left: 50%;
+                width: 70%;
+                transform: translate(-50%);
+              }
+
+              @media (max-width: 419px) {
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%);
               }
             }
           }

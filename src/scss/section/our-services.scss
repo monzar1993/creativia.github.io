@@ -1,5 +1,5 @@
 .our-services {
-  background-color: #272727;
+  background-color: $our-services-bg;
   overflow: hidden;
 
   .our-services-top-part {
@@ -10,12 +10,12 @@
       font-family: "Raleway";
       font-size: 30px;
       font-weight: 700;
-      color: #fff;
+      color: $our-services-h5;
       padding-top: 100px;
       margin-bottom: 49px;
 
       span {
-        color: #ff0036;
+        color: $our-services-span;
       }
     }
 
@@ -39,45 +39,59 @@
       margin-top: 57px;
       cursor: pointer;
 
+      @media (max-width: 1199px) {
+        margin: 57px auto 0;
+      }
+
       &:hover {
         .head {
           #hex1 {
             #color1 {
-              background-color: #ff0036;
+              background-color: $our-services-span;
 
               i {
-                color: #fff;
+                color: $our-services-h5;
               }
             }
           }
         }
 
         .contents {
-          background-color: #ff0036;
+          background-color: $our-services-span;
 
           p {
-            color: #fff;
+            color: $our-services-h5;
           }
         }
       }
 
       .head {
+        @media (max-width: 575px) {
+          margin: 0;
+        }
+
         p {
           font-family: "Raleway";
           font-size: 20px;
           font-weight: 500;
           text-transform: uppercase;
-          color: #fff;
+          color: $our-services-h5;
           padding-top: 23px;
           padding-left: 33px;
+
+          @media (max-width: 424px) {
+            font-size: 18px;
+            padding-left: 18px;
+          }
         }
+
         #hex1 {
           width: 66px;
           height: 66px;
         }
 
         #color1 {
-          background-color: #a4a4a4;
+          background-color: $our-services-color1;
 
           i {
             font-size: 31px;
@@ -129,17 +143,29 @@
       }
       .contents {
         width: 570px;
-        height: 121px;
-        background-color: #343434;
+        background-color: $our-services-contents;
         text-align: justify;
+
+        @media (max-width: 991px) {
+          width: 540px;
+        }
+
+        @media (max-width: 575px) {
+          width: 100%;
+          margin: 0;
+        }
 
         p {
           font-family: "Lato";
           font-size: 16px;
           font-weight: 400;
           line-height: 22px;
-          color: #a4a4a4;
+          color: $our-services-color1;
           padding: 35px;
+
+          @media (max-width: 575px) {
+            padding: 10px;
+          }
         }
       }
     }
